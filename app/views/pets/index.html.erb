@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Is that your puppy? 😿</h1>
+  <div class="row">
+    <%= @pets.each_with_index do |pet, index| %>
+      <div class="col-4">
+        <div class="card mb-3">
+          <img src="https://loremflickr.com/320/320/<%= pet.species %>,<%= index %>" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title"><%= pet.name %></h5>
+            <p class="card-text">📍<%= pet.location %></p>
+            <p class="card-text">Found <%= pet.days_ago %> days ago</p>
+            <%= link_to "More info", pet_path(pet), class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

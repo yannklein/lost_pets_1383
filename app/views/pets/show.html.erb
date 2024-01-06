@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold"><%= @pet.name %></h1>
+      <p class="col-md-8 fs-4"><%= @pet.species %></p>
+      <p class="col-md-8 fs-4">Found <%= @pet.days_ago %> days ago</p>
+      <%= link_to "Back", pets_path, class: "btn btn-primary btn-lg" %>
+    </div>
+  </div>
+</div>

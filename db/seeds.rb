@@ -12,7 +12,7 @@ Pet.destroy_all
 puts "creating 20 pets..."
 20.times do
   pet = Pet.create!(
-    name: Faker::Creature::Animal.name,
+    name: Faker::Name.first_name,
     species: Pet::SPECIES.sample,
     gender: Pet::GENDER.sample,
     color: Faker::Color.color_name,

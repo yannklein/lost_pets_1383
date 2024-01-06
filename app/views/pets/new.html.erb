@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row justify-content-center my-5">
+    <div class="col-6">
+      <h1 class="mb-3">I found a pet!</h1>
+      <%= simple_form_for @pet do |f| %>
+        <%= f.input :name %>
+        <%= f.input :gender, collection: Pet::GENDER %>
+        <%= f.input :species, collection: Pet::SPECIES %>
+        <%= f.input :color %>
+        <%= f.input :location %>
+        <%= f.input :found_on, html5: true %>
+        <div class="d-grid gap-2">
+          <%= f.submit class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
